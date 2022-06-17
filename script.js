@@ -42,7 +42,7 @@ function validateEmail(){
       emailError.innerHTML = 'Email required'
       return false;
    }
-   if (!email.match(/^[0-9]{10}$/)) {
+   if (!email.match(/^[A-Za-z\._\-[0-9]*[@][A-Za-z]*[\.][a-z]{2,3}$/)) {
       emailError.innerHTML='Email invalid'
       return false;      
      }
@@ -57,10 +57,11 @@ function validateMessage(){
       messageError.innerHTML = left + 'More character required' 
       return false;
    }
-     
      messageError.innerHTML= '';
      return true;
 }
+
+
 
 
 

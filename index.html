@@ -56,7 +56,7 @@
 							<div class="text">
 								<span class="subheading">Hello! This is Subhan</span>
 								<h1 class="mb-4 mt-3">Creative <span>UI/UX</span> Designer &amp; Developer</h1>
-								<p><a href="#" class="btn btn-primary">Hire me</a> <a href="#" class="btn btn-primary btn-outline-primary">Download CV</a></p>
+								<p><a href="#" class="btn btn-primary">Hire me</a></p>
 							</div>
 						</div>
 					</div>
@@ -75,7 +75,7 @@
 							<div class="text">
 								<span class="subheading">We Design &amp; Build Brands</span>
 								<h1 class="mb-4 mt-3">Hi, I am <span>Subhan</span> This is my favorite work.</h1>
-								<p><a href="#" class="btn btn-primary">Hire me</a> <a href="#" class="btn btn-primary btn-outline-primary">Download CV</a></p>
+								<p><a href="#" class="btn btn-primary">Hire me</a></p>
 							</div>
 						</div>
 					</div>
@@ -151,7 +151,7 @@
 							<div class="col-md-12 heading-section ftco-animate">
 								<span class="subheading">My Intro</span>
 								<h2 class="mb-4" style="font-size: 34px; text-transform: capitalize;">About Me</h2>
-								<p>hi.my name is Subhan ibrahim i am from kannur kerala india. i am studying.software developing passionate about technology and ready explore the technology</p>
+								<p>hi.my name is Subhan ibrahim i am from kannur kerala india. i am studying software developing passionate about technology and ready explore the technology</p>
 
 								<ul class="about-info mt-4 px-md-0 px-2">
 									<li class="d-flex"><span>Name:</span> <span>Subhan ibrahim</span></li>
@@ -434,16 +434,15 @@
 				</div>
 				<div class="col-md-6 col-lg-3">
 					<div class="media block-6 services d-block bg-white rounded-lg shadow ftco-animate">
-						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-branding"></span></div>
+						<div class="icon shadow d-flex align-items-center justify-content-center"><span class="flaticon-computer"></span></div>
 						<div class="media-body">
 							<h3 class="heading mb-3">Branding</h3>
-							<p> create a strong, positive perception for a company.such elements as logo, design</p>
+							<p>create a strong great positive perception for a company all global</p>
 						</div>
 					</div> 
 				</div>
 			</div>
 	</section>
-
 	<section class="ftco-hireme">
 		<div class="container">
 			<div class="row justify-content-between">
@@ -650,7 +649,7 @@
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="submit" id="submit" value="Send Message" class="btn btn-primary py-3 px-5">
+									<button  type="submit" id="submit" class="btn btn-primary py-3 px-5">submit</button>	
 								</div>
 							</div>
 						</div>
@@ -706,7 +705,7 @@
 				<div class="col-md">
 					<div class="ftco-footer-widget mb-4">
 						<h2 class="ftco-heading-2">Lets talk about</h2>
-						<p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+						<p>connect with me.share your ideas and thoughts i am greatful to connect with you and talk with you<p>
 						<p><a href="#" class="btn btn-primary">Learn more</a></p>
 					</div>
 				</div>
@@ -747,7 +746,7 @@
 						<ul class="ftco-footer-social list-unstyled mt-2">
 							<li class="ftco-animate"><a href="#"><span class="fa fa-twitter"></span></a></li>
 							<li class="ftco-animate"><a href="#"><span class="fa fa-facebook"></span></a></li>
-							<li class="ftco-animate"><a href="https://www.instagram.com/subhan_iibrahim/"><span class="fa fa-instagram"></span></a></li>
+							<li class="ftco-animate"><a href="https://www.instagram.com/subhan_iibrahim/" target="_blank"><span class="fa fa-instagram"></span></a></li>
 						</ul>
 					</div>
 				</div>
@@ -787,7 +786,7 @@
 		<script src="script.js"></script>
 		<script>
 			$("#submit-form").submit((e)=>{
-				
+				event.preventDefault();
 				$.ajax({
 					url:"https://script.google.com/macros/s/AKfycbzl7yRA37gN9a8SorFnY3iJMbMNhqE-cbjBgdEiMX-TpFzf-yJr1iyYvtLK1JR8mV_V/exec",
 					data:$("#submit-form").serialize(),
@@ -798,8 +797,7 @@
 						//window.location.href="https://google.com"
 					},
 					error:function (err){
-						alert("Something Error")
-		
+						alert("Something Error")		
 					}
 				})
 			})
