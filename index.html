@@ -620,7 +620,7 @@
 
 			<div class="row block-9">
 				<div class="col-md-8">
-					<div id="error"></div>
+					
 					<form id="submit-form" action="" class="bg-light p-4 p-md-5 contact-form">
 						<div class="row">
 							<div class="col-md-6">
@@ -649,7 +649,8 @@
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<button  type="submit" id="submit" class="btn btn-primary py-3 px-5">submit</button>	
+									<button  type="submit" id="submit" class="btn btn-primary py-3 px-5" onclick="return validateform()">submit</button>
+									<span id="submit-error"></span>	
 								</div>
 							</div>
 						</div>
@@ -713,11 +714,11 @@
 					<div class="ftco-footer-widget mb-4 ml-md-4">
 						<h2 class="ftco-heading-2">Links</h2>
 						<ul class="list-unstyled">
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Home</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Services</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Projects</a></li>
-							<li><a href="#"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
+							<li><a href="#projects-section"><span class="fa fa-chevron-right mr-2"></span>Home</a></li>
+							<li><a href="#about-section"><span class="fa fa-chevron-right mr-2"></span>About</a></li>
+							<li><a href="#services-section"><span class="fa fa-chevron-right mr-2"></span>Services</a></li>
+							<li><a href="#Project-section"><span class="fa fa-chevron-right mr-2"></span>Projects</a></li>
+							<li><a href="#contact-section"><span class="fa fa-chevron-right mr-2"></span>Contact</a></li>
 						</ul>
 					</div>
 				</div>

@@ -37,7 +37,7 @@ function validateMobile(){
 }
 
 function validateEmail(){
-   var email = document.getElementById('email').value
+   var email = document.getElementById('email').value;
    if(email.length==0){
       emailError.innerHTML = 'Email required'
       return false;
@@ -50,7 +50,7 @@ function validateEmail(){
      return true;
 }
 function validateMessage(){
-   var message = document.getElementById('message').value
+   var message = document.getElementById('message').value;
    var required = 30;
    var left = required -message.length;
    if(left > 0){
@@ -60,8 +60,13 @@ function validateMessage(){
      messageError.innerHTML= '';
      return true;
 }
-
-
-
-
-
+function validateForm() {
+   if(!validateName() || !validateMobile()|| !validateEmail() || !validateMessage()){
+      submitError.style.display ='block';
+      submitError.innerHTML ='please fix the error to submit'
+      setTimeout(function() {submitError.style.display = 'none';
+         
+      },3000);
+      return false;
+   }
+}
