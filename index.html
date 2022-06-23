@@ -157,7 +157,7 @@
 									<li class="d-flex"><span>Name:</span> <span>Subhan ibrahim</span></li>
 									<li class="d-flex"><span>Date of birth:</span> <span>april 23/2003</span></li>
 									<li class="d-flex"><span>Address:</span> <span>mangad po kalliasseri kerala,india</span></li>
-									<li class="d-flex"><span>Email:</span> <span>subhanibrahim07@gmail.om</span></li>
+									<li class="d-flex"><span>Email:</span> <span>subhan07@gmail.com</span></li>
 									<li class="d-flex"><span>Phone: </span> <span>+91 9544280859</span></li>
 								</ul>
 							</div>
@@ -625,31 +625,31 @@
 						<div class="row">
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="text" id="name" class="form-control" placeholder="Your Name" onkeyup=" validateName() ">
+									<input class="form-control" type="text" id="name" name="name" placeholder="Your name" onkeyup=" validateName() ">
 									<span id="name-error" style="color: rgb(153,9,9);"></span>
 								</div>
 							</div>
 							<div class="col-md-6">
 								<div class="form-group">
-									<input type="email" id="email" class="form-control" placeholder="Your Email" onkeyup="validateEmail() " >
+									<input class="form-control" type="text" id="email" name="email" placeholder="Your Email" onkeyup="validateEmail() " >
 									<span id="email-error" style="color: rgb(153,9,9);"></span>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<input type="tel" id="number" class="form-control" placeholder="Your Mobile number" onkeyup="validateMobile()" >
+									<input type="tel" name="number" id="number" class="form-control" placeholder="Your Mobile number" onkeyup="validateMobile()" >
 									<span id="mobile-error"  style="color: rgb(153,9,9);"></span>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<textarea name="" id="message" cols="30" rows="7" class="form-control" placeholder="Message" onkeyup="validateMessage() "></textarea>
+									<textarea name="message" id="message" cols="30" rows="7" class="form-control" placeholder="Message" onkeyup="validateMessage() "></textarea>
 									<span id="message-error" style="color: rgb(153,9,9);"></span>
 								</div>
 							</div>
 							<div class="col-md-12">
 								<div class="form-group">
-									<button  type="submit" id="submit" class="btn btn-primary py-3 px-5" onclick="return validateform()">submit</button>
+									<button name="submit" type="submit" id="submit" class="btn btn-primary py-3 px-5" onclick="return validateform()">submit</button>
 									<span id="submit-error"></span>	
 								</div>
 							</div>
@@ -764,10 +764,27 @@
 		</footer>
 		
 		
-
 		<!-- loader -->
 		<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
-
+		<script>
+			$("#submit-form").submit((e)=>{
+			   event.preventDefault()
+			   $.ajax({
+				  url:"https://script.google.com/macros/s/AKfycbwVEpvU5MRtdrEovzUtD9jQQHbe7MMPiO_He0M9ZI0VuP5rWxXLS3UX04jyMgwh5U018w/exec",
+				  data:$("#submit-form").serialize(),
+				  dataType: 'jsonp',
+				  method:"post",
+				  success:function (response){
+					 alert("Form submitted successfully")
+					 window.location.reload()
+					 //window.location.href="https://google.com"
+				  },
+				  error:function (err){
+					 alert("Something went wrong")		
+				  }
+			   })
+			})
+		 </script>
 
 		<script src="js/jquery.min.js"></script>
 		<script src="js/jquery-migrate-3.0.1.min.js"></script>
@@ -785,23 +802,6 @@
 		
 		<script src="js/main.js"></script>
 		<script src="script.js"></script>
-		<script>
-			$("#submit-form").submit((e)=>{
-				event.preventDefault();
-				$.ajax({
-					url:"https://script.google.com/macros/s/AKfycbzl7yRA37gN9a8SorFnY3iJMbMNhqE-cbjBgdEiMX-TpFzf-yJr1iyYvtLK1JR8mV_V/exec",
-					data:$("#submit-form").serialize(),
-					method:"post",
-					success:function (response){
-						alert("Form submitted successfully")
-						window.location.reload()
-						//window.location.href="https://google.com"
-					},
-					error:function (err){
-						alert("Something Error")		
-					}
-				})
-			})
-		</script>
+	
 	</body>
 	</html>
